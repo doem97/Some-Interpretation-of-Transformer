@@ -1,0 +1,12 @@
+
+Based on above definition, we could model self-attention's input $x_i, x_j$ as two time samples of two random processing $X_i(t, S_{i}), X_j(t, S_{j})$ at same time $t=t_0$. Notice the two position $i,j$ have different sample space $S_i, S_j$:
+
+\begin{align}
+    x_i &= \left. X_i(t, S_i)\right\vert_{t=t_0}\\
+    x_j &= \left. X_j(t, S_j)\right\vert_{t=t_0}
+\end{align}
+
+$t_0$ is the sample time. For machine learning, $t$ means different batches of data.
+
+Note that $x_i=\{x_i^{\alpha}\},\alpha\in[1,d_x]$ is not a value but a row vector of $1\times d_x$ dim. Assume each dimension of $x_i$ are i.i.d.\footnote{Independent and Identically Distributed} random variables follow sampling space $S_i$, we could treat each element $x_i^{\alpha}$ as a sample on time $t=t_0$
+    
